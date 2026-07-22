@@ -6,7 +6,7 @@ This repository documents my engineering approach, mathematical strategies, and 
 ### Project Overview
 The objective is to maximize **eight unknown synthetic black-box functions** ranging from 2D to 8D hypervolumes. Each function simulates a high-stakes, expensive-to-evaluate industrial or scientific task like radiation source detection, drug discovery, or hyperparameter tuning where sample efficiency is paramount.
 
-We operate under a strict **sequential data budget**, starting with 10 initial data points in Module 12 and acquiring exactly one new query coordinate per function per week, culminating in 22 total data points by the end of Module 24.
+We operate under a **sequential data budget**, starting with 10 initial data points in Module 12 and acquiring one new query coordinate per function per week, culminating in 22 total data points by the end of Module 24.
 
 ### The 8 Black-Box Challenges
 * **Function 1 (2D):** Radiation Field Source Detection (Vanishing gradients/Sparsity challenge).
