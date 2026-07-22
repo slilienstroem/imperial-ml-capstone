@@ -1,10 +1,10 @@
-# Imperial College London - ML & AI Capstone Project
+# Imperial College London - MLAI Capstone Project
 ## Sequential Black-Box Optimization Competition (Modules 12–24)
 
 This repository documents my engineering approach, mathematical strategies, and iterative results for the **Sequential Black-Box Optimization Challenge** as part of the Imperial College London Professional Certificate in Machine Learning & Artificial Intelligence.
 
 ### Project Overview
-The objective is to maximize **eight unknown synthetic black-box functions** ranging from 2D to 8D hypervolumes. Each function simulates a high-stakes, expensive-to-evaluate industrial or scientific task (e.g., radiation source detection, drug discovery, hyperparameter tuning) where sample efficiency is paramount. 
+The objective is to maximize **eight unknown synthetic black-box functions** ranging from 2D to 8D hypervolumes. Each function simulates a high-stakes, expensive-to-evaluate industrial or scientific task like radiation source detection, drug discovery, or hyperparameter tuning where sample efficiency is paramount.
 
 We operate under a strict **sequential data budget**, starting with 10 initial data points in Module 12 and acquiring exactly one new query coordinate per function per week, culminating in 22 total data points by the end of Module 24.
 
@@ -29,7 +29,7 @@ We operate under a strict **sequential data budget**, starting with 10 initial d
 ```
 
 ### Cumulative Results Tracker
-*This table tracks the best-observed output value ($y_{max}$) across all rounds. Lower-is-better tasks have been structurally transformed by the program into maximization problems.*
+*This table tracks the best-observed output value (y_max) across all rounds. Lower-is-better tasks have been structurally transformed by the program into maximization problems.*
 
 | Function | Dimension | Initial Max $y$ | Round 1 $y$ | Round 2 $y$ | Current Best $y_{max}$ |
 |----------|-----------|-----------------|-------------|-------------|-----------------------|
