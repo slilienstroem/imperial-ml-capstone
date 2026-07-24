@@ -8,14 +8,14 @@ The feedback query data returned from the Black-Box Optimization (BBO) engine yi
 * **Function 1 (2D):** Returned a flat response near zero. The probe remains entirely trapped within the vanishing gradient region, indicating the source has not yet been localized.
 * **Function 2 (2D):** Returned a minor negative response of -0.04. However, data parsing uncovered a historical latent peak of 0.61 within the baseline repository, which serves as a vital anchor point for future operations.
 * **Functions 3, 4, and 6:** Produced values hovering near or slightly below zero, indicating that these high-dimensional spaces require more expansive sampling before local optimization can occur.
-* **Function 5 (4D):** Produced a massive breakthrough signal of 1245.62. This indicates that the first round probe successfully locked onto the steep flank of the hidden unimodal global peak.
+* **Function 5 (4D):** Produced a breakthrough signal of 1245.62. This indicates that the first round probe successfully locked onto the steep flank of the hidden unimodal global peak.
 * **Functions 7 and 8 (6D & 8D):** Broke out of the zero landscape, returning promising early signals of 1.25 and 9.67, respectively.
 
 ### 2. Methodological Adaptation (Dynamic Acquisition Policies)
 To maximize efficiency under the constrained sequential budget, a Differentiated Policy Engine was coded into the main pipeline, dynamically adjusting the Upper Confidence Bound (UCB) exploration weight (beta) based on individual function responses:
 
-* **Category A: Aggressive Exploitation (beta = 0.3) [Function 5]**  
-  Given the massive yield detected for Function 5, the acquisition policy immediately pivoted to hyper-local exploitation. By collapsing beta to 0.3, the algorithm was forced to strictly prioritize the surrogate model's predicted mean surface over epistemic uncertainty. The resulting query candidate closely mirrors the prior coordinate, aiming to rapidly ascend the local gradient toward the global maximum.
+* **Category A: Exploitation (beta = 0.3) [Function 5]**  
+  Given the yield detected for Function 5, the acquisition policy pivoted to hyper-local exploitation. By collapsing beta to 0.3, the algorithm was forced to prioritize the surrogate model's predicted mean surface over epistemic uncertainty. The resulting query candidate closely mirrors the prior coordinate, aiming to rapidly ascend the local gradient toward the global maximum.
 * **Category B: Sustained Exploration (beta = 3.0) [Functions 1 & 2]**  
   To counteract the complete absence of gradient signals in Function 1 and to thoroughly scan the noisy domain around the 0.61 peak in Function 2, the exploration pressure was held at its maximum limit.
 * **Category C: Balanced Optimization (beta = 1.5) [Functions 3, 4, 6, 7 & 8]**  
