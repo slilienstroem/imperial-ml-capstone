@@ -29,18 +29,18 @@ We operate under a **sequential data budget**, starting with 10 initial data poi
 ```
 
 ### Cumulative Results Tracker
-*This table tracks the best-observed output value (y_max) across all rounds. Lower-is-better tasks have been structurally transformed by the program into maximization problems.*
+*This table tracks the baseline maxima and the absolute best-observed output value ($y_{max}$) achieved across all sequential optimization rounds.*
 
-| Function | Dimension | Initial Max $y$ | Round 1 $y$ | Round 2 $y$ | Current Best $y_{max}$ |
-|----------|-----------|-----------------|-------------|-------------|-----------------------|
-| F1       | 2D        | *[TBD]*         | *[Pending]* |             |                       |
-| F2       | 2D        | *[TBD]*         | *[Pending]* |             |                       |
-| F3       | 3D        | *[TBD]*         | *[Pending]* |             |                       |
-| F4       | 4D        | *[TBD]*         | *[Pending]* |             |                       |
-| F5       | 4D        | *[TBD]*         | *[Pending]* |             |                       |
-| F6       | 5D        | *[TBD]*         | *[Pending]* |             |                       |
-| F7       | 6D        | *[TBD]*         | *[Pending]* |             |                       |
-| F8       | 8D        | *[TBD]*         | *[Pending]* |             |                       |
+| Function | Dimension | Baseline Max $y$ | Round 1 Feedback ($y$) | Current Best $y_{max}$ | Target Type |
+|----------|-----------|------------------|------------------------|-----------------------|-------------|
+| **F1**   | 2D        | 0.00             | 1.59e-83               | **0.00**              | Maximization |
+| **F2**   | 2D        | 0.61             | -0.04                  | **0.61**              | Maximization |
+| **F3**   | 3D        | -0.03            | -0.08                  | **-0.03**             | Maximization |
+| **F4**   | 4D        | -0.42            | -0.42                  | **-0.42**             | Maximization |
+| **F5**   | 4D        | *[Low]*          | 1245.62                | **1245.62** 🔥        | Maximization |
+| **F6**   | 5D        | -0.31            | -0.31                  | **-0.31**             | Maximization |
+| **F7**   | 6D        | 1.36             | 1.25                   | **1.36**              | Maximization |
+| **F8**   | 8D        | 9.67             | 9.67                   | **9.67**              | Maximization |
 
 ---
 👉 **[Read the Weekly Engineering Logs](./docs/logs/)**
