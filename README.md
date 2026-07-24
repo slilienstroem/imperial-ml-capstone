@@ -29,7 +29,7 @@ We operate under a **sequential data budget**, starting with 10 initial data poi
 ```
 
 ### Cumulative Results Tracker
-*This table tracks the baseline maxima and the absolute best-observed output value ($y_{max}$) achieved across all sequential optimization rounds.*
+*This table tracks the baseline maxima and the absolute best-observed output value like y_max achieved across all sequential optimization rounds.*
 
 | Function | Dimension | Baseline Max $y$ | Round 1 Feedback ($y$) | Current Best $y_{max}$ | Target Type |
 |----------|-----------|------------------|------------------------|-----------------------|-------------|
