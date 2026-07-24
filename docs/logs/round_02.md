@@ -5,10 +5,10 @@
 ### 1. Performance Analysis of Round 1 Responses
 The feedback query data returned from the Black-Box Optimization (BBO) engine yielded critical topographical insights, causing a permanent shift from a uniform exploration strategy to a highly targeted, group-specific framework:
 
-* **Function 1 (2D):** Returned a flat response near zero. The probe remains entirely trapped within the vanishing gradient region, indicating the source has not yet been localized.
+* **Function 1 (2D):** Returned a flat response near zero. The submitted query point remains entirely trapped within the vanishing gradient region, indicating the source has not yet been localized.
 * **Function 2 (2D):** Returned a minor negative response of -0.04. However, data parsing uncovered a historical latent peak of 0.61 within the baseline repository, which serves as a vital anchor point for future operations.
 * **Functions 3, 4, and 6:** Produced values hovering near or slightly below zero, indicating that these high-dimensional spaces require more expansive sampling before local optimization can occur.
-* **Function 5 (4D):** Produced a breakthrough signal of 1245.62. This indicates that the first round probe successfully locked onto the steep flank of the hidden unimodal global peak.
+* **Function 5 (4D):** Produced a breakthrough signal of 1245.62. This indicates that the first round query point successfully locked onto the steep flank of the hidden unimodal global peak.
 * **Functions 7 and 8 (6D & 8D):** Broke out of the zero landscape, returning promising early signals of 1.25 and 9.67, respectively.
 
 ### 2. Methodological Adaptation (Dynamic Acquisition Policies)
