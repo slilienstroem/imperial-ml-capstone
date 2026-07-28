@@ -40,7 +40,7 @@ We operate under a **sequential data budget**, starting with 10 initial data poi
 | **F5**   | 4D        | *[Low]*          | 1245.62                | 1405.55                | **1405.55** 🔥        | Maximization |
 | **F6**   | 5D        | -0.31            | -0.31                  | -0.55                  | **-0.31**             | Maximization |
 | **F7**   | 6D        | 1.36             | 1.25                   | 1.35                   | **1.36**              | Maximization |
-| **F8**   | 8D        | 9.67             | 9.67                   | 9.82    
+| **F8**   | 8D        | 9.67             | 9.67                   | 9.82                   | **9.82**              | Maximization |
 
 ---
 👉 **[Read the Weekly Engineering Logs](./docs/logs/)**
