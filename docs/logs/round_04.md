@@ -3,13 +3,13 @@
 **Data Budget:** 13+ Cumulative Points -> Submission of 14th Query Point
 
 ### 1. Performance Analysis of Round 3 Responses
-The feedback array from the third execution round delivered excellent strategic validations and one great success marker:
+The feedback array from the third execution round delivered strategic validations and one great success marker:
 
 * **Function 1 (2D):** Returned another flat response near zero. The global landscape remains entirely featuresless in this sub-volume, demanding continued boundary expansion.
 * **Function 2 (2D):** Maintained its steady upward trend, rising to 0.12. This proves that scanning the vicinity of the historical baseline maximum is yielding consistent progress.
 * **Functions 3, 4, and 6:** Exhibited non-linear fluctuations, with Function 4 dropping sharply to -2.32. This performance dip confirms highly complex multi-modal topographies.
 * **Function 5 (4D):** Achieved an milestone, skyrocketing from 1405.55 to a yield of 1770.87. This confirms that the exploitation policy is successfully navigating the steepest ascent of the global peak.
-* **Functions 7 and 8 (6D & 8D):** Retained solid plateaus at 1.10 and 9.77. Although Function 8 dropped marginally from 9.82 to 9.77, it remains firmly positioned on a high-yield local ridge.
+* **Functions 7 and 8 (6D and 8D):** Retained solid plateaus at 1.10 and 9.77. Although Function 8 dropped marginally from 9.82 to 9.77, it remains firmly positioned on a high-yield local ridge.
 
 ### 2. Methodological Advancement: Support Vector Machine (SVM) Region Filtering
 In alignment with the curriculum of module 14, I modified the optimization architecture to transition from a pure Gaussian Process model to a hybrid framework utilizing a Soft-Margin Support Vector Classifier (SVC). 
