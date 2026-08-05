@@ -13,6 +13,8 @@ The optimization pipeline interacts with the black-box engine through a standard
 *   **Inputs:** A continuous, bounded coordinate vector within a hypercubic unit space. Dimensions vary across functions from 2D up to 8D. Each coordinate must strictly fall within the constraints of 0.000000 to 1.000000. For submission, the query format requires a single hyphen-separated string rounded precisely to six decimal places (for example, `0.320637-0.791333-0.947010-0.960370` for a 4D task).
 *   **Outputs:** A single scalar response value representing the objective performance signal returned by the black-box engine after a sequential processing delay. This signal is unnormalized and scales uniquely for each task (for example, floating-point metrics near zero for F1, or scaling above 2000.00 for industrial yield simulations in F5).
 
+*Note on Data Hosting:* In strict accordance with the Capstone Project FAQs, the raw numerical .npy datasets (initial historical baselines and cumulative array updates) are not hosted directly within this public GitHub repository. The underlying data source is securely stored and maintained locally, while the structural metadata, formats, and tracking limits are fully defined within this documentation.
+
 ## Section 3: Challenge Objectives
 The core objective is to maximize the performance output across all eight distinct black-box functions. Tasks historically configured for minimization have been structurally transformed by my pipeline into maximization problems to ensure structural consistency. 
 
