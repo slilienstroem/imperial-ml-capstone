@@ -18,7 +18,7 @@ The optimization pipeline interacts with the black-box engine through a standard
 ## Section 3: Challenge Objectives
 The core objective is to maximize the performance output across all eight distinct black-box functions. Tasks historically configured for minimization have been structurally transformed by my pipeline into maximization problems to ensure structural consistency. 
 
-The strategy must operate within the following systemic constraints:
+The strategy must rigorously operate within the following systemic constraints:
 1.  **Strict Query Budget:** A limitation of exactly one query submission per function per week over a multi-week horizon.
 2.  **Evaluation Latency:** High response delay, preventing instantaneous feedback loop adjustments.
 3.  **Agnostic Environments:** Completely unknown function topographies, requiring the model to robustly handle diverse landscapes, varying noise levels, and non-uniform heteroscedasticity.
@@ -28,7 +28,7 @@ My technical architecture evolved from a uniform baseline exploration to a highl
 
 *   **Surrogate Modeling:** I implement a Bayesian optimization framework utilizing a Gaussian Process (GP) regressor with an isotropic Matern kernel (length scale fixed at 0.2) to mathematically model the unknown response surfaces while securing numerical stability in flat gradient regions.
 *   **Geometric Filtering (SVM):** To isolate productive regions, a Soft-Margin Support Vector Machine (SVC with an RBF kernel and C=1.0) is trained dynamically on historical data binarized by a 75th percentile threshold. The SVM draws a non-linear decision boundary, creating a safety enclave that discards unpromising coordinate volumes.
-*   **Exploration vs. Exploitation Balance:** The UCB acquisition function is controlled on a strictly function-by-function basis. For high-performing signals like Function 5 (yield at 2154.69), beta is collapsed to 0.05 (Hyper-Exploitation) to accelerate local gradient ascent. For flat or declining regions like Functions 1 and 4, beta is elevated to 3.0 (Sustained Exploration) to systematically scan the boundaries of the hypercube using a 50,000-point Monte Carlo sampling procedure.
+*   **Exploration versus Exploitation Balance:** The UCB acquisition function is controlled on a strictly function-by-function basis. For high-performing signals like Function 5 (yield at 2154.69), beta is collapsed to 0.05 (Exploitation) to accelerate local gradient ascent. For flat or declining regions like Functions 1 and 4, beta is elevated to 3.0 (Sustained Exploration) to systematically scan the boundaries of the hypercube using a 50,000-point Monte Carlo sampling procedure.
 
 ### The 8 Black-Box Challenges
 * **Function 1 (2D):** Radiation Field Source Detection (Vanishing gradients/Sparsity challenge).
@@ -42,15 +42,17 @@ My technical architecture evolved from a uniform baseline exploration to a highl
 
 ### Project Layout
 ```text
-├── initial_data/          # Structured by function_1/ to function_8/ containing .npy files
-├── Capstone_Master_Code.ipynb # Main automated orchestration pipeline
+├── initial_data/              # Local data storage (Structured by function_1/ to function_8/, excluded via .gitignore)
+├── models/
+│   └── Capstone_Master_Code.ipynb # Main automated machine learning orchestration pipeline
 ├── docs/
-│   └── logs/              # Weekly Engineering Logs (Round-by-Round Breakdown)
-│       ├── round_01.md    # Module 12: Initial Exploration Strategy
-│       ├── round_02.md    # Module 13: Dynamische Akquisitions-Policies
-│       ├── round_03.md    # Module 14: Hyper-Exploitation-Schleife (F5 Peak)
-│       └── round_04.md    # Module 15: Hybrides GP-SVM Regionen-Filtering
-└── README.md              # Project executive summary
+│   └── logs/                  # Weekly Engineering Logs (Sequential round-by-round progress)
+│       ├── round_01.md        # Module 12: Initial Uniform Exploration Strategy
+│       ├── round_02.md        # Module 13: Differentiated Acquisition Policies
+│       ├── round_03.md        # Module 14: Exploitation Search Loop (F5 Peak Exploration)
+│       └── round_04.md        # Module 15: Hybrid GP-SVM Support Vector Region Filtering
+├── .gitignore                 # Technical safeguard to prevent public hosting of raw .npy datasets
+└── README.md                  # Project executive summary and comprehensive portfolio overview
 ```
 
 ### Cumulative Results Tracker
