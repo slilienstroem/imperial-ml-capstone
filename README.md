@@ -40,8 +40,6 @@ My technical architecture evolved from a uniform baseline exploration to a highl
 * **Function 7 (6D):** ML Model Hyperparameter Tuning (Highly non-linear validation score landscape).
 * **Function 8 (8D):** High-Dimensional Deep Learning Architecture Calibration (Curse of dimensionality challenge).
 
-### Project Layout
-```text
 ├── initial_data/              # Local data storage (Structured by function_1/ to function_8/, excluded via .gitignore)
 ├── models/
 │   └── Capstone_Master_Code.ipynb # Main automated machine learning orchestration pipeline
@@ -49,11 +47,12 @@ My technical architecture evolved from a uniform baseline exploration to a highl
 │   └── logs/                  # Weekly Engineering Logs (Sequential round-by-round progress)
 │       ├── round_01.md        # Module 12: Initial Uniform Exploration Strategy
 │       ├── round_02.md        # Module 13: Differentiated Acquisition Policies
-│       ├── round_03.md        # Module 14: Exploitation Search Loop (F5 Peak Exploration)
-│       └── round_04.md        # Module 15: Hybrid GP-SVM Support Vector Region Filtering
+│       ├── round_03.md        # Module 14: Hyper-Exploitation Search Loop (F5 Peak Exploration)
+│       ├── round_04.md        # Module 15: Hybrid GP-SVM Support Vector Region Filtering
+│       └── round_05.md        # Module 16: Hyper-Exploitation Fine-Tuning and Peak Verification
 ├── .gitignore                 # Technical safeguard to prevent public hosting of raw .npy datasets
 └── README.md                  # Project executive summary and comprehensive portfolio overview
-```
+
 
 ### Cumulative Results Tracker
 *This table tracks the baseline maxima and the absolute best-observed output value like y_max achieved across all sequential optimization rounds.*
