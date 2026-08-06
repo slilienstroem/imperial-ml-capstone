@@ -40,6 +40,7 @@ My technical architecture evolved from a uniform baseline exploration to a highl
 * **Function 7 (6D):** ML Model Hyperparameter Tuning (Highly non-linear validation score landscape).
 * **Function 8 (8D):** High-Dimensional Deep Learning Architecture Calibration (Curse of dimensionality challenge).
 
+### Project Layout
 ```text
 ├── initial_data/              # Local data storage (Structured by function_1/ to function_8/, excluded via .gitignore)
 ├── models/
