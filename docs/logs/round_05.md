@@ -21,14 +21,14 @@ Based on the empirical feedback from Round 4, the acquisition parameters were sy
 ### 3. Executed Query Submissions
 The hybrid GP-SVM engine generated the following precise coordinates for submission to the Capstone Portal:
 
-* **Function 1 (2D):** 0.675477-0.000160
-* **Function 2 (2D):** 0.000030-0.854635
-* **Function 3 (3D):** 0.355006-0.487900-0.410307
-* **Function 4 (4D):** 0.454234-0.459940-0.398980-0.282405
-* **Function 5 (4D):** 0.339088-0.831659-0.964642-0.972950
-* **Function 6 (5D):** 0.597034-0.264056-0.622372-0.816516-0.068382
-* **Function 7 (6D):** 0.114639-0.425485-0.190218-0.121015-0.288420-0.784497
-* **Function 8 (8D):** 0.190188-0.181424-0.103023-0.288040-0.295864-0.802807-0.427642-0.776255
+* **Function 1 (2D):** `0.675477-0.000160`
+* **Function 2 (2D):** `0.000030-0.854635`
+* **Function 3 (3D):** `0.355006-0.487900-0.410307`
+* **Function 4 (4D):** `0.454234-0.459940-0.398980-0.282405`
+* **Function 5 (4D):** `0.339088-0.831659-0.964642-0.972950`
+* **Function 6 (5D):** `0.597034-0.264056-0.622372-0.816516-0.068382`
+* **Function 7 (6D):** `0.114639-0.425485-0.190218-0.121015-0.288420-0.784497`
+* **Function 8 (8D):** `0.190188-0.181424-0.103023-0.288040-0.295864-0.802807-0.427642-0.776255`
 
 ### 4. Next-Round Strategic Outlook
 Round 6 will evaluate if the exploitation policy on Function 5 yields diminishing returns, signaling the proximity of the absolute global apex. Additionally, as individual datasets approach larger dimensions, the pipeline prepares for the transition toward Automatic Relevance Determination (ARD) kernels to isolate and freeze irrelevant dimensions.
