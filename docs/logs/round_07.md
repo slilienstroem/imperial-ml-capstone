@@ -17,7 +17,7 @@ To counteract localized convergence and exploit high-dimensional spaces, three t
 * **Anisotropic ARD Activation (Functions 7 and 8):** Upgraded the surrogate architecture to an anisotropic ARD Matern formulation utilizing maximum marginal likelihood estimation via the 'fmin_l_bfgs_b' optimizer. The architecture successfully identified uninformative spatial directions, driving their corresponding length scales toward the asymptotic upper boundary (100.0) and effectively flattening non-contributing dimensions.
 
 ### 3. Executed Query Submissions
-The complete hybrid pipeline generated the following target coordinates for the sixth optimization round:
+The complete hybrid pipeline generated the following target coordinates for the seventh optimization round:
 
 * **Function 1 (2D):** `0.007796-0.999010`
 * **Function 2 (2D):** `0.001077-0.004907`
