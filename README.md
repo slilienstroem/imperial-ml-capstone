@@ -23,12 +23,14 @@ The strategy must rigorously operate within the following systemic constraints:
 2.  **Evaluation Latency:** High response delay, preventing instantaneous feedback loop adjustments.
 3.  **Agnostic Environments:** Completely unknown function topographies, requiring the model to robustly handle diverse landscapes, varying noise levels, and non-uniform heteroscedasticity.
 
-## Section 4: Technical Approach
-My technical architecture evolved from a uniform baseline exploration to a highly customized, two-stage hybrid machine learning pipeline:
+### Section 4: Technical Approach
 
-*   **Surrogate Modeling:** I implement a Bayesian optimization framework utilizing a Gaussian Process (GP) regressor with an isotropic Matern kernel (length scale fixed at 0.2) to mathematically model the unknown response surfaces while securing numerical stability in flat gradient regions.
-*   **Geometric Filtering (SVM):** To isolate productive regions, a Soft-Margin Support Vector Machine (SVC with an RBF kernel and C=1.0) is trained dynamically on historical data binarized by a 75th percentile threshold. The SVM draws a non-linear decision boundary, creating a safety enclave that discards unpromising coordinate volumes.
-*   **Exploration versus Exploitation Balance:** The UCB acquisition function is controlled on a strictly function-by-function basis. For high-performing signals like Function 5 (yield at 2154.69), beta is collapsed to 0.05 (Exploitation) to accelerate local gradient ascent. For flat or declining regions like Functions 1 and 4, beta is elevated to 3.0 (Sustained Exploration) to systematically scan the boundaries of the hypercube using a 50,000-point Monte Carlo sampling procedure.
+The technical architecture evolved from a uniform baseline exploration to a highly customized, two-stage hybrid machine learning pipeline tailored to heteroscedastic and high-dimensional spaces:
+
+* **Surrogate Modeling & Anisotropic ARD:** The core optimization framework utilizes a Gaussian Process (GP) regressor. While low-dimensional functions utilize an isotropic Matern kernel (length scale fixed at 0.2), the high-dimensional spaces (Functions 7 and 8) deploy an anisotropic Automatic Relevance Determination (ARD) formulation with bounds between 1e-2 and 1e2. Optimized via maximum marginal likelihood estimation using the L-BFGS-B algorithm, the ARD kernel dynamically flattens non-contributing dimensions to isolate the true gradient paths.
+* **Geometric Filtering (SVM):** To isolate high-yield regions and accelerate convergence, a Soft-Margin Support Vector Machine (SVC with an RBF kernel and C=1.0) is trained dynamically on historical data binarized by a statistical 75th percentile threshold. The SVM draws a non-linear decision boundary, creating a safety enclave that crops the Monte Carlo sampling space to discard unpromising hypervolumes for stable functions.
+* **Stochastic Noise Regularization:** To shield the underperforming and highly erratic landscapes (Functions 1, 2, 4, and 6) from localized stagnation traps, the white-noise regularization parameter is dynamically expanded to alpha = 1e-3. This algorithmic smoothing prevents the acquisition framework from tracking transient, uninformative local minima.
+* **Exploration versus Exploitation Balance:** Spatial coordinates are generated via a 60,000-point Monte Carlo sampling grid evaluated through an Upper Confidence Bound (UCB) acquisition function. The exploration factor is  differentiated: high-performing signals like Function 5 (locked at the 2767.84 apex) utilize micro-exploitation (beta minimized between 0.001 and 0.01) to perform localized gradient verification, while stagnation zones are forced into aggressive exploration (beta maximized at 4.5) with disabled SVM enclaves to fracture restrictive local modis.
 
 ### The 8 Black-Box Challenges
 * **Function 1 (2D):** Radiation Field Source Detection (Vanishing gradients/Sparsity challenge).
