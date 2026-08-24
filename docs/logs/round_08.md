@@ -1,6 +1,6 @@
 # Engineering Log: Round 8 (Module 19)
 **Date:** August 2026  
-**Data Budget:** 18 Cumulative Points per Function -> Submission of 19th Query Point
+**Data Budget:** 17 Cumulative Points per Function -> Submission of 18th Query Point
 
 ### 1. Performance Analysis of Round 7 Responses
 The evaluation of the seventh sequential iteration cycle confirmed a breakthrough in high-dimensional space scaling and localized apex verification:
