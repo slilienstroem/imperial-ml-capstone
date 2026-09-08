@@ -56,7 +56,8 @@ The technical architecture evolved from a uniform baseline exploration to a high
 │       ├── round_05.md        # Module 16: Exploitation Fine-Tuning and Peak Verification
 │       ├── round_06.md        # Module 17: Automatic Relevance Determination (ARD) Tuning
 │       ├── round_07.md        # Module 18: Stratified Exploration Weights and Active Optimization
-│       └── round_08.md        # Module 19: Noise Regularization and Micro-Exploration
+│       ├── round_08.md        # Module 19: Noise Regularization and Micro-Exploration
+│       └── round_09.md        # Module 20: Targeted Peak Capture and High-Dimensional Pruning
 ├── .gitignore                 # Technical safeguard to prevent public hosting of raw .npy datasets
 ├── requirements.txt           # Environment dependencies for 1:1 replicability
 └── README.md                  # Project executive summary and comprehensive portfolio overview
@@ -65,16 +66,16 @@ The technical architecture evolved from a uniform baseline exploration to a high
 ### Cumulative Results Tracker
 *This table tracks the baseline maxima and the absolute best-observed output value like y_max achieved across all sequential optimization rounds.*
 
-| Function | Dimension | Baseline Max y | Round 1 Feedback (y) | Round 2 Feedback (y) | Round 3 Feedback (y) | Round 4 Feedback (y) | Round 5 Feedback (y) | Round 6 Feedback (y) | Round 7 Feedback (y) | Current Best y_max | Target Type |
-|----------|-----------|----------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|--------------------|-------------|
-| **F1**   | 2D        | 0.00           | 1.59e-83             | -4.17e-157           | 1.18e-216            | 0.00                 | 2.07e-169            | 6.87e-246            | 0.00                 | **0.00**           | Maximization |
-| **F2**   | 2D        | 0.61           | -0.04                | 0.05                 | 0.12                 | 0.53                 | -0.05                | -0.08                | -0.10                | **0.61**           | Maximization |
-| **F3**   | 3D        | -0.03          | -0.08                | -0.01                | -0.02                | -0.00                | -0.02                | -0.02                | -0.03                | **-0.00**          | Maximization |
-| **F4**   | 4D        | -0.42          | -0.42                | -0.95                | -2.32                | -0.69                | -2.13                | -4.32                | -4.62                | **-0.42**          | Maximization |
-| **F5**   | 4D        | *[Low]*        | 1245.62              | 1405.55              | 1770.87              | 2154.69              | 2229.18              | 2767.84              | 2767.84              | **2767.84** 🔥     | Maximization |
-| **F6**   | 5D        | -0.31          | -0.31                | -0.55                | -0.53                | -0.51                | -0.36                | -0.43                | -0.88                | **-0.31**          | Maximization |
-| **F7**   | 6D        | 1.36           | 1.25                 | 1.35                 | 1.10                 | 1.20                 | 1.44                 | 1.18                 | 1.03                 | **1.44** 🚀        | Maximization |
-| **F8**   | 8D        | 9.67           | 9.67                 | 9.82                 | 9.77                 | 9.73                 | 9.64                 | 9.67                 | 9.77                 | **9.82**           | Maximization |
+| Function | Dimension | Baseline Max y | Round 1 Feedback (y) | Round 2 Feedback (y) | Round 3 Feedback (y) | Round 4 Feedback (y) | Round 5 Feedback (y) | Round 6 Feedback (y) | Round 7 Feedback (y) | Round 8 Feedback (y) | Current Best y_max | Target Type |
+|----------|-----------|----------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|--------------------|-------------|
+| **F1**   | 2D        | 0.00           | 1.59e-83             | -4.17e-157           | 1.18e-216            | 0.00                 | 2.07e-169            | 6.87e-246            | 0.00                 | 0.00                 | **0.00**           | Maximization |
+| **F2**   | 2D        | 0.61           | -0.04                | 0.05                 | 0.12                 | 0.53                 | -0.05                | -0.08                | -0.10                | -0.06                | **0.61**           | Maximization |
+| **F3**   | 3D        | -0.03          | -0.08                | -0.01                | -0.02                | -0.00                | -0.02                | -0.02                | -0.03                | -0.03                | **-0.00**          | Maximization |
+| **F4**   | 4D        | -0.42          | -0.42                | -0.95                | -2.32                | -0.69                | -2.13                | -4.32                | -4.62                | -4.42                | **-0.42**          | Maximization |
+| **F5**   | 4D        | *[Low]*        | 1245.62              | 1405.55              | 1770.87              | 2154.69              | 2229.18              | 2767.84              | 2767.84              | 2825.70              | **2825.70** 🔥     | Maximization |
+| **F6**   | 5D        | -0.31          | -0.31                | -0.55                | -0.53                | -0.51                | -0.36                | -0.43                | -0.88                | -0.76                | **-0.31**          | Maximization |
+| **F7**   | 6D        | 1.36           | 1.25                 | 1.35                 | 1.10                 | 1.20                 | 1.44                 | 1.18                 | 1.03                 | 1.96                 | **1.96**           | Maximization |
+| **F8**   | 8D        | 9.67           | 9.67                 | 9.82                 | 9.77                 | 9.73                 | 9.64                 | 9.67                 | 9.77                 | 9.84                 | **9.84**           | Maximization |
 
 ---
 👉 **[Read the Weekly Engineering Logs](./docs/logs/)**
