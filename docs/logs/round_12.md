@@ -26,7 +26,16 @@ With only two sequential query rounds remaining in the project lifespan, the sys
 
 ### 3. Executed Query Submissions
 
-The automated machine learning pipeline generated eight coordinate vectors for the twelfth sequential round across dimensions 2D through 8D.
+The automated machine learning pipeline generated the following coordinate vectors for the twelfth sequential round:
+
+- **Function 1 (2D):** `0.812622-0.761696`
+- **Function 2 (2D):** `0.738012-0.871249`
+- **Function 3 (3D):** `0.515566-0.746191-0.633520`
+- **Function 4 (4D):** `0.348678-0.362124-0.358857-0.461165`
+- **Function 5 (4D):** `0.181810-0.967906-0.999246-0.978209`
+- **Function 6 (5D):** `0.488701-0.345731-0.662354-0.871553-0.220437`
+- **Function 7 (6D):** `0.003793-0.231639-0.483146-0.296855-0.377177-0.633307`
+- **Function 8 (8D):** `0.067744-0.397018-0.076294-0.074942-0.903764-0.560955-0.232852-0.400667`
 
 ### 4. Strategic Outlook
 
