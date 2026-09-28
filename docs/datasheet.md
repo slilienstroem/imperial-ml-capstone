@@ -56,4 +56,4 @@ Yes, specific transformations were applied during the collection loop to guide t
 In accordance with the Capstone Project guidelines and data secrecy requirements, the raw numerical `.npy` arrays are excluded from public hosting using a `.gitignore` safeguard to preserve challenge integrity. However, the exact chronological metadata, parameter choices, and results tracking matrices are transparently published and version-controlled via this repository.
 
 ### Who maintains it?
-The dataset is exclusively tracked, archived, and managed by the repository owner ([@slilienstroem](https://github.com)) using the Git version control system.
+The dataset is exclusively tracked, archived, and managed by the repository owner ([@slilienstroem](https://github.com/slilienstroem/)) using the Git version control system.
