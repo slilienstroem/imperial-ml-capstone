@@ -6,7 +6,7 @@ This model card follows the official simplified template provided by Imperial Co
 
 - **Model Name:** Hybrid GP-SVM Adaptive Enclave Orchestrator
 - **Version:** 2.4 (Active Semi-Final Production State)
-- **Developer(s):** @slilienstroem
+- **Developer(s):** [@slilienstroem](https://github.com/slilienstroem/)
 - **Contact Information:** (Optional - Maintained via GitHub profile)
 - **Licence:** Academic Use Only (Imperial College London)
 
@@ -41,7 +41,7 @@ The architecture sequentially optimizes eight independent, hidden black-box targ
   - `Function 2 (2D):` Recovered from early negative variance dips to hit a stable peak of `0.61`.
   - `Function 3 (3D):` Converged smoothly near the boundary terrain at `-0.00`.
   - `Function 4 (4D):` Successfully recovered from a deep decay valley (`-30.25431`) back to `-9.34066` after the inversion multiplier deployment.
-  - `Function 5 (4D):` Executed the absolute pipeline breakthrough, fracturing a long-standing plateau to reach an absolute global maximum of `3747.36`.
+  - `Function 5 (4D):` Executed the pipeline breakthrough, fracturing a long-standing plateau to reach an global maximum of `3747.36`.
   - `Function 6 (5D):` Stabilized and returned to its optimized target profile baseline of `-0.31`.
   - `Function 7 (6D):` Safely isolated a highly non-linear gradient ridge to secure an optimal peak of `1.96`.
   - `Function 8 (8D):` Successfully navigated the hyper-sparse 8D space to establish an absolute record peak of `9.90738`.
@@ -56,7 +56,7 @@ The architecture sequentially optimizes eight independent, hidden black-box targ
 ## 6. Model Life Cycle
 
 - **Date of Last Update:** September 2026 (Milestone Iteration `Round 11`)
-- **Version Control or Repository:** Managed and version-controlled via the public Git repository branch: `slilienstroem/imperial-ml-capstone`.
+- **Version Control or Repository:** Managed and version-controlled via the public Git repository branch: `[slilienstroem/imperial-ml-capstone](https://github.com/slilienstroem/imperial-ml-capstone/)`.
 - **Monitoring Plan:** The pipeline health and convergence behavior are monitored weekly through a tracking matrix. If a function exhibits unexpected signal decay (such as the anomaly detected on `Function 4`), a systematic diagnostic review is triggered to evaluate kernel bound modifications or output-inversion mapping.
 
 ## 7. Architectural Adequacy Statement
