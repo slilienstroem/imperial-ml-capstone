@@ -56,7 +56,7 @@ The architecture sequentially optimizes eight independent, hidden black-box targ
 ## 6. Model Life Cycle
 
 - **Date of Last Update:** September 2026 (Milestone Iteration `Round 11`)
-- **Version Control or Repository:** Managed and version-controlled via the public Git repository branch: `[slilienstroem/imperial-ml-capstone](https://github.com/slilienstroem/imperial-ml-capstone/)`.
+- **Version Control or Repository:** Managed and version-controlled via the public Git repository branch: [slilienstroem/imperial-ml-capstone](https://github.com/slilienstroem/imperial-ml-capstone/).
 - **Monitoring Plan:** The pipeline health and convergence behavior are monitored weekly through a tracking matrix. If a function exhibits unexpected signal decay (such as the anomaly detected on `Function 4`), a systematic diagnostic review is triggered to evaluate kernel bound modifications or output-inversion mapping.
 
 ## 7. Architectural Adequacy Statement
