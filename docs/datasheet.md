@@ -19,7 +19,7 @@ The dataset development was supported by the academic infrastructure of the Impe
 The dataset contains continuous coordinate query vectors (inputs) and unnormalized scalar evaluation scores (outputs):
 - **Inputs:** Bounded coordinate vectors in hypercubic unit space (2D to 8D), with coordinates between 0.000000 and 1.000000 formatted as hyphen-separated strings rounded to six decimals.
 - **Outputs:** Single scalar objective performance signals with varying scales per task.
-- **Format & Instances:** Stored as NumPy arrays (.npy) partitioned from function_1/tofunction_8/`. At the current milestone of Round 11, each function contains 21 historical point pairs (10 initial baseline samples plus 11 sequential queries), expanding to a total final budget of 23 data points upon completion of all 13 weekly submissions.
+- **Format & Instances:** Stored as NumPy arrays (.npy) partitioned from function_1/ to function_8/. At the current milestone of Round 11, each function contains 21 historical point pairs (10 initial baseline samples plus 11 sequential queries), expanding to a total final budget of 23 data points upon completion of all 13 weekly submissions.
 - **Dimensionality:** Ranging from 2D (Functions 1-2) up to 8D (Function 8).
 
 ### Are there gaps or missing data?
