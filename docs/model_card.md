@@ -25,7 +25,7 @@ The architecture sequentially optimizes eight independent, hidden black-box targ
 ## 3. Training Data
 
 - **Data Sources:** The data ingestion layer starts with 10 initial baseline coordinates provided by Imperial College London. Subsequent data pairs are actively collected weekly from the sequential black-box server responses.
-- **Size of Dataset:** At the milestone of Round 11, the dataset contains exactly 21 active input-output points per function (10 initial university samples plus 11 sequentially generated pipeline query pairs).
+- **Size of Dataset:** At the current milestone of Round 11, each function contains exactly 21 historical point pairs (10 initial baseline samples plus 11 sequential queries), expanding to a total final budget of 23 data points upon completion of all 13 weekly submissions.
 - **Languages or Modalities:** Continuous numerical arrays containing coordinate matrices (inputs) and scalar response metrics (outputs).
 - **Preprocessing Steps:** 
   - Dynamic binarization of objective feedback outputs based on a rolling 75th percentile threshold to generate target classes (`0` or `1`) for geometric space-pruning.
