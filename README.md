@@ -61,7 +61,8 @@ The technical architecture evolved from a uniform baseline exploration to a high
 │   │   ├── round_10.md        # Module 21: Algorithmic Desynchronization and Inversion Anomalies
 │   │   ├── round_11.md        # Module 22: Boundary Recalibration and Inversion Inferences
 │   │   └── round_12.md        # Module 23: Differentiated Final Horizon Policy and Targeted Variance Compression
-│   └── datasheet.md           # Dataset Datasheet — Comprehensive data governance and bias documentation
+│   ├── datasheet.md           # Dataset Datasheet — Comprehensive data governance and bias documentation
+│   └── model_card.md          # Model Card — Standardized architectural and performance documentation
 ├── .gitignore                 # Technical safeguard to prevent public hosting of raw .npy datasets
 ├── requirements.txt           # Environment dependencies for 1:1 replicability
 └── README.md                  # Project executive summary and comprehensive portfolio overview
@@ -85,3 +86,4 @@ The tracking matrix below documents the sequential evolution of peak objective p
 👉 **Project Documentation & Artifacts:**
 - [Read the Weekly Engineering Logs](docs/logs/round_12.md)
 - [Review the Dataset Datasheet](docs/datasheet.md)
+- [Review the Approach Model Card](docs/model_card.md)
