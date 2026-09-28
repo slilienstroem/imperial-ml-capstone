@@ -48,19 +48,20 @@ The technical architecture evolved from a uniform baseline exploration to a high
 ├── models/
 │   └── Capstone_Master_Code.ipynb # Main automated machine learning orchestration pipeline
 ├── docs/
-│   └── logs/                  # Weekly Engineering Logs (Sequential round-by-round progress)
-│       ├── round_01.md        # Module 12: Initial Uniform Exploration Strategy
-│       ├── round_02.md        # Module 13: Differentiated Acquisition Policies
-│       ├── round_03.md        # Module 14: Exploitation Search Loop (F5 Peak Exploration)
-│       ├── round_04.md        # Module 15: Hybrid GP-SVM Support Vector Region Filtering
-│       ├── round_05.md        # Module 16: Exploitation Fine-Tuning and Peak Verification
-│       ├── round_06.md        # Module 17: Automatic Relevance Determination (ARD) Tuning
-│       ├── round_07.md        # Module 18: Stratified Exploration Weights and Active Optimization
-│       ├── round_08.md        # Module 19: Noise Regularization and Micro-Exploration
-│       ├── round_09.md        # Module 20: Targeted Peak Capture and High-Dimensional Pruning
-│       ├── round_10.md        # Module 21: Algorithmic Desynchronization and Inversion Anomalies
-│       ├── round_11.md        # Module 22: Boundary Recalibration and Inversion Inferences
-│       └── round_12.md        # Module 23: Differentiated Final Horizon Policy and Targeted Variance Compression
+│   ├── logs/                  # Weekly Engineering Logs (Sequential round-by-round progress)
+│   │   ├── round_01.md        # Module 12: Initial Uniform Exploration Strategy
+│   │   ├── round_02.md        # Module 13: Differentiated Acquisition Policies
+│   │   ├── round_03.md        # Module 14: Exploitation Search Loop (F5 Peak Exploration)
+│   │   ├── round_04.md        # Module 15: Hybrid GP-SVM Support Vector Region Filtering
+│   │   ├── round_05.md        # Module 16: Exploitation Fine-Tuning and Peak Verification
+│   │   ├── round_06.md        # Module 17: Automatic Relevance Determination (ARD) Tuning
+│   │   ├── round_07.md        # Module 18: Stratified Exploration Weights and Active Optimization
+│   │   ├── round_08.md        # Module 19: Noise Regularization and Micro-Exploration
+│   │   ├── round_09.md        # Module 20: Targeted Peak Capture and High-Dimensional Pruning
+│   │   ├── round_10.md        # Module 21: Algorithmic Desynchronization and Inversion Anomalies
+│   │   ├── round_11.md        # Module 22: Boundary Recalibration and Inversion Inferences
+│   │   └── round_12.md        # Module 23: Differentiated Final Horizon Policy and Targeted Variance Compression
+│   └── datasheet.md           # Dataset Datasheet — Comprehensive data governance and bias documentation
 ├── .gitignore                 # Technical safeguard to prevent public hosting of raw .npy datasets
 ├── requirements.txt           # Environment dependencies for 1:1 replicability
 └── README.md                  # Project executive summary and comprehensive portfolio overview
@@ -81,4 +82,6 @@ The tracking matrix below documents the sequential evolution of peak objective p
 | **F8** | 8D | 9.67 | 9.67 | 9.82 | 9.77 | 9.73 | 9.64 | 9.67 | 9.77 | 9.84 | 9.74631 | 9.84613 | 9.90738 | **9.90738** | Maximization |
 
 ---
-👉 **[Read the Weekly Engineering Logs](./docs/logs/)**
+👉 **Project Documentation & Artifacts:**
+- [Read the Weekly Engineering Logs](docs/logs/round_12.md)
+- [Review the Dataset Datasheet](docs/datasheet.md)
