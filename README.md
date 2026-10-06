@@ -60,7 +60,8 @@ The technical architecture evolved from a uniform baseline exploration to a high
 │   │   ├── round_09.md        # Module 20: Targeted Peak Capture and High-Dimensional Pruning
 │   │   ├── round_10.md        # Module 21: Algorithmic Desynchronization and Inversion Anomalies
 │   │   ├── round_11.md        # Module 22: Boundary Recalibration and Inversion Inferences
-│   │   └── round_12.md        # Module 23: Differentiated Final Horizon Policy and Targeted Variance Compression
+│   │   ├── round_12.md        # Module 23: Differentiated Final Horizon Policy and Targeted Variance Compression
+│   │   └── round_13.md        # Module 24: Final Horizon Policy and Pure Exploitation Override
 │   ├── datasheet.md           # Dataset Datasheet — Comprehensive data governance and bias documentation
 │   └── model_card.md          # Model Card — Standardized architectural and performance documentation
 ├── .gitignore                 # Technical safeguard to prevent public hosting of raw .npy datasets
@@ -71,19 +72,19 @@ The technical architecture evolved from a uniform baseline exploration to a high
 
 The tracking matrix below documents the sequential evolution of peak objective performance across all functions up to the current iteration.
 
-| **Function** | **Dim** | **Baseline** | **R1** | **R2** | **R3** | **R4** | **R5** | **R6** | **R7** | **R8** | **R9** | **R10** | **R11** |**Current Best** | **Target** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **F1** | 2D | 0.00 | 1.59e-83 | -4.17e-157 | 1.18e-216 | 0.00 | 2.07e-169 | 6.87e-246 | 0.00 | 0.00 | 0.00 | 4.62e-145 | 2.68e-154 | **0.00** | Maximization |
-| **F2** | 2D | 0.61 | -0.04 | 0.05 | 0.12 | 0.53 | -0.05 | -0.08 | -0.10 | -0.06 | 0.13636 | 0.16031 | 0.09996 | **0.61** | Maximization |
-| **F3** | 3D | -0.03 | -0.08 | -0.01 | -0.02 | -0.00 | -0.02 | -0.02 | -0.03 | -0.03 | -0.12075 | -0.12306 | -0.01982 | **-0.00** | Maximization |
-| **F4** | 4D | -0.42 | -0.42 | -0.95 | -2.32 | -0.69 | -2.13 | -4.32 | -4.62 | -4.42 | -4.50809 | -30.25431 | -9.34066 | **-0.42** | Maximization |
-| **F5** | 4D | *[Low]* | 1245.62 | 1405.55 | 1770.87 | 2154.69 | 2229.18 | 2767.84 | 2767.84 | 2825.70 | 3620.6528 | 3747.3554 | 3182.08426 | **3747.36** 🔥 | Maximization |
-| **F6** | 5D | -0.31 | -0.31 | -0.55 | -0.53 | -0.51 | -0.36 | -0.43 | -0.88 | -0.76 | -0.82254 | -0.56623 | -0.42286 | **-0.31** | Maximization |
-| **F7** | 6D | 1.36 | 1.25 | 1.35 | 1.10 | 1.20 | 1.44 | 1.18 | 1.03 | 1.96 | 1.06158 | 1.69037 | 1.03822 | **1.96** | Maximization |
-| **F8** | 8D | 9.67 | 9.67 | 9.82 | 9.77 | 9.73 | 9.64 | 9.67 | 9.77 | 9.84 | 9.74631 | 9.84613 | 9.90738 | **9.90738** | Maximization |
+| **Function** | **Dim** | **Baseline** | **R1** | **R2** | **R3** | **R4** | **R5** | **R6** | **R7** | **R8** | **R9** | **R10** | **R11** | **R12** | **Current Best** | **Target** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **F1** | 2D | 0.00 | 1.59e-83 | -4.17e-157 | 1.18e-216 | 0.00 | 2.07e-169 | 6.87e-246 | 0.00 | 0.00 | 0.00 | 4.62e-145 | 2.68e-154 | 7.37e-37 | **0.00** | Maximization |
+| **F2** | 2D | 0.61 | -0.04 | 0.05 | 0.12 | 0.53 | -0.05 | -0.08 | -0.10 | -0.06 | 0.13636 | 0.16031 | 0.09996 | 0.48477 | **0.61** | Maximization |
+| **F3** | 3D | -0.03 | -0.08 | -0.01 | -0.02 | -0.00 | -0.02 | -0.02 | -0.03 | -0.03 | -0.12075 | -0.12306 | -0.01982 | -0.09106 | **-0.00** | Maximization |
+| **F4** | 4D | -0.42 | -0.42 | -0.95 | -2.32 | -0.69 | -2.13 | -4.32 | -4.62 | -4.42 | -4.50809 | -30.25431 | -9.34066 | -0.13948 | **-0.13948** | Maximization |
+| **F5** | 4D | *[Low]* | 1245.62 | 1405.55 | 1770.87 | 2154.69 | 2229.18 | 2767.84 | 2767.84 | 2825.70 | 3620.6528 | 3747.3554 | 3182.08426 | 3747.35539 | **3747.36** 🔥 | Maximization |
+| **F6** | 5D | -0.31 | -0.31 | -0.55 | -0.53 | -0.51 | -0.36 | -0.43 | -0.88 | -0.76 | -0.82254 | -0.56623 | -0.42286 | -0.30956 | **-0.30956** | Maximization |
+| **F7** | 6D | 1.36 | 1.25 | 1.35 | 1.10 | 1.20 | 1.44 | 1.18 | 1.03 | 1.96 | 1.06158 | 1.69037 | 1.03822 | 2.60372 | **2.60372** 🔥 | Maximization |
+| **F8** | 8D | 9.67 | 9.67 | 9.82 | 9.77 | 9.73 | 9.64 | 9.67 | 9.77 | 9.84 | 9.74631 | 9.84613 | 9.90738 | 9.90738 | **9.90738** | Maximization |
 
 ---
 👉 **Project Documentation & Artifacts:**
-- [Read the Weekly Engineering Logs](docs/logs/round_12.md)
+- [Read the Weekly Engineering Logs](docs/logs/round_13.md)
 - [Review the Dataset Datasheet](docs/datasheet.md)
 - [Review the Approach Model Card](docs/model_card.md)
