@@ -1,8 +1,8 @@
 # Engineering Log: Round 13 (Module 24)
 
-- **Date:** October 2026
-- **Data Budget:** `22` Cumulative Points -> Selection of `23rd` Terminal Point
-- **Execution Policy:** Terminal Horizon Pure Exploitation Override
+Date: October 2026
+
+Data Budget: 22 Cumulative Points per Function -> Submission of 23rd Query Point
 
 ## 1. Performance Analysis of Round 12 Responses
 
